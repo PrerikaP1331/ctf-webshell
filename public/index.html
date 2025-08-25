@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CTF Webshell Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="content">
+        <h1>Example Challenge: The Hidden Disk</h1>
+        <p>We've recovered a corrupted disk image from a suspect's machine. It seems to be a simple gzipped file, but there might be more to it than meets the eye. Find the hidden flag within.</p>
+        
+        <div class="file-download">
+            <span>disko-1.dd.gz</span>
+            <p>Downloadable with <code>curl http://localhost:3000/challenges/disko-1.dd.gz</code> in the webshell.</p>
+        </div>
+    </main>
+
+    <!-- The button that opens the webshell -->
+    <button id="webshell-toggle-btn">Webshell</button>
+
+    <!-- The container for the webshell, initially hidden -->
+    <div id="webshell-container">
+        <div class="webshell-header">
+            <span>CTF Webshell</span>
+            <button id="webshell-reset-btn">Reset</button>
+        </div>
+        <div class="webshell-body">
+            <!-- The terminal will be loaded into this iframe -->
+            <iframe id="terminal-frame"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
